@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata || Ridho Ms</title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="brand">Ridho MS</div>
+            <ul class="nav-link">
+                <li><a href="#Biodata">Biodata</a></li>
+                <li><a href="#Pendidikan">Pendidikan</a></li>
+                <li><a href="#Pengalaman">Pengalaman</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Biodata  -->
+        <section id="Biodata">
+            <div class="profile-card">
+                <img src="lol.jpg" alt="Foto Ridho" class="profile-img">
+                <div class="profile-info">
+                    <h1>Ridho Maulana Saputra</h1>
+                    <p><strong>NIM:</strong> 124140090</p>
+                    <p><strong>Jurusan:</strong> Teknik Informatika</p>
+                    <p><strong>Jenis Kelamin:</strong> Laki-laki</p>
+                    <p><strong>Tempat Lahir:</strong> Lampung Tengah</p>
+                    <p><strong>Tanggal Lahir:</strong> 05 September 2005</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pendidikan -->
+        <section id="Pendidikan">
+            <h2 class="section-title">Pendidikan</h2>
+            <div class="Pendidikan-card">
+                <h3>Institut Teknologi Sumatera</h3>
+                <p class="date">2024 - Now</p>
+                <p>Program Studi Teknik Informatika</p>
+                <p>GPA: 3.79/4.00</p>
+            </div>
+
+            <div class="Pendidikan-card">
+                <h3>SMK Negeri 2 Terbanggi Besar</h3>
+                <p class="date">2021 - 2024</p>
+                <p>Jurusan Teknik Komputer dan Jaringan</p>
+            </div>
+        </section>
+
+        <!-- Pengalaman -->
+        <section id="Pengalaman">
+            <h2 class="section-title">Pengalaman</h2>
+            <div class="Pengalaman-card">
+                <h3>Magang sebagai Teknisi Jaringan</h3>
+                <p class="date">Januari - Maret 2023</p>
+                <p>PT. Surya Megalink Baratama </p>
+                <p>Melakukan Instalasi dan Maintenance Jaringan Fiber Optik</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
