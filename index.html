@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata || Ridho Ms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="brand">RMS</div>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-link">
+                <li><a href="#Biodata">Biodata</a></li>
+                <li><a href="#Pendidikan">Pendidikan</a></li>
+                <li><a href="#Pengalaman">Pengalaman</a></li>
+                <li><a href="#Kontak">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Biodata  -->
+        <section id="Biodata">
+            <div class="profile-card">
+                <img src="/image/Foto.jpg" alt="Foto Ridho" class="profile-img">
+                <div class="profile-info">
+                    <h1>Ridho Maulana Saputra</h1>
+                    <p><strong>NIM:</strong> 124140090</p>
+                    <p><strong>Jurusan:</strong> Teknik Informatika</p>
+                    <p><strong>Jenis Kelamin:</strong> Laki-laki</p>
+                    <p><strong>Tempat Lahir:</strong> Lampung Tengah</p>
+                    <p><strong>Tanggal Lahir:</strong> 05 September 2005</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pendidikan -->
+        <section id="Pendidikan">
+            <h2 class="section-title">Pendidikan</h2>
+            <table class="education-table">
+                <thead>
+                    <tr>
+                        <th>Institusi</th>
+                        <th>Program/Jurusan</th>
+                        <th>Periode</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Institut Teknologi Sumatera</td>
+                        <td>Teknik Informatika</td>
+                        <td>2024 - Sekarang</td>
+                    </tr>
+                    <tr>
+                        <td>SMK Negeri 2 Terbanggi Besar</td>
+                        <td>Teknik Komputer dan Jaringan</td>
+                        <td>2021 - 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Pengalaman -->
+        <section id="Pengalaman">
+            <h2 class="section-title">Pengalaman</h2>
+            <div class="Pendidikan-card">
+                <h3>Magang sebagai Teknisi Jaringan</h3>
+                <p class="date">Januari - Maret 2023</p>
+                <p>PT. Surya Megalink Baratama </p>
+                <p>Melakukan Instalasi dan Maintenance Jaringan Fiber Optik</p>
+            </div>
+        </section>
+
+        <!-- Footer Kontak -->
+        <footer id="Kontak">
+            <div class="social-links">
+                <a href="mailto:ridhomsaputra328@gmail.com" class="social-icon" title="Email">
+                    <img src="/image/email.png" alt="Email">
+                </a>
+                <a href="https://www.instagram.com/udin_voldigoad" target="_blank" class="social-icon" title="Instagram">
+                    <img src="/image/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://github.com/ridhomsaputra" target="_blank" class="social-icon" title="GitHub">
+                    <img src="/image/github.png" alt="GitHub">
+                </a>
+            </div>
+            <p class="footer-text">© 2024 Ridho Maulana Saputra.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Toggle mobile menu
+        const hamburger = document.querySelector('.hamburger');
+        const navLink = document.querySelector('.nav-link');
+        
+        hamburger.addEventListener('click', () => {
+            navLink.classList.toggle('active');
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                navLink.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

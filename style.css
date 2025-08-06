@@ -1,0 +1,264 @@
+:root {
+    --primary: #3498db;
+    --dark: #2c3e50;
+    --light: #ecf0f1;
+    --accent: #e74c3c;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 80px;
+}
+
+section {
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: var(--primary);
+    transition: var(--transition);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled {
+    background: var(--dark);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+}
+
+.brand {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-link {
+    display: flex;
+    list-style: none;
+}
+
+.nav-link li {
+    margin-left: 20px;
+}
+
+.nav-link a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.nav-link a:hover {
+    color: var(--accent);
+}
+
+/* Biodata */
+.profile-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--light);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-right: 30px;
+    transition: var(--transition);
+}
+
+.profile-info {
+    flex: 1;
+    min-width: 250px;
+}
+
+.profile-info h1 {
+    color: var(--dark);
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--dark);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background: var(--primary);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.education-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.education-table th,
+.education-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--light);
+}
+
+.education-table th {
+    background-color: var(--primary);
+    color: white;
+}
+
+.Pendidikan-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 20px;
+    transition: var(--transition);
+}
+
+.Pendidikan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+    transition: var(--transition);
+    opacity: 0.8;
+}
+
+.social-icon:hover img {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: var(--transition);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .nav-link {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background: var(--dark);
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .nav-link.active {
+        display: flex;
+    }
+    
+    .nav-link li {
+        margin: 10px 0;
+    }
+}
+
+.footer-text {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: var(--light);
+    opacity: 0.7;
+}
+
+@media (max-width: 480px) {
+    .brand {
+        font-size: 1.2rem;
+    }
+    .social-links {
+        gap: 15px;
+    }
+}
